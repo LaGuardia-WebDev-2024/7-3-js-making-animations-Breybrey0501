@@ -1,34 +1,46 @@
-# 7.3-JS-Making-Animations
+# 7-2-JS-More-on-Variables
 
 ## Video
 
-[Making Animations](https://youtu.be/us3_U9xnttc) <-- Make sure to watch this video first
+[Video](https://youtu.be/wrtJ-KI6lL0) <-- Make sure to watch this video first
 
 ## Directions
 
-### Step #1 - Explode the sun! <br>
+### Step #1 - A mouth! <br>
 
-Now, to make the sun get bigger, add 1 to the `sunSize` variable inside the draw function.
+Our frog has no mouth! Use the ellipse function to draw a wide mouth on the frog's face, centering the mouth at the same `x` and `y` as the face. Make it big enough to eat a lot of flies!
 <br>
 
-### Step #2 - Animate the ladybug <br>
+### Step #2 - Draw eyes <br>
 
-Create a new variable for the x-position of the red ellipse named `x`.
+The frog already has eyeballs, but no pupils. How will he find the tasty flies if he can't see them?? Draw them using two rectangles, and use the `x` and `y` coordinates to position them inside the eyeballs (adding or subtracting as necessary).
 <br><br>
-Replace the x-value of the red ellipse so that is the variable `x`.
-<br><br>
-Change the value of `x` inside the draw function so that the ladybug moves across the grass.
-
+Hint: Take a look at the code for the eyeballs and do something similar to position the pupils.
 <br>
 
-# Extra
+### Step #3 - Play! <br>
 
-### Get the Animation to Repeat
+Add more code to the pde - variables, shapes, colors, etc.
 
-Add this line of code to the end of your draw function to get the animation to repeat.
+# Extras
 
-`if(sunSize > 400){`<br>
-` sunSize = 30;`<br>
-`}`
+### Move Frog with Cursor
 
-We will learn about if statements in a later unit. To give you a preview the above code in english translates to "If the variable sunSize has a value greater than 400, then reset the sunSize to a value of 30"
+Check to see if your `x` and `y` variables work by adding this line of code to end of the `draw()` function.
+
+`x = mouseX;`<br>
+`y = mouseY;`
+
+Now when you run your mouse over the canvas the frog should follow your cursor.
+
+### Randomly Color Frog
+
+Try adding these variables outside of the `draw()` function
+
+`var randRed = random(0,255);`<br>
+`var randGreen = random(0,255);`<br>
+`var randBlue = random(0,255);`
+
+Inside of the draw() add this line
+
+`fill (randRed, randGreen, randBlue);`
